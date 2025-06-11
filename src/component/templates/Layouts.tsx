@@ -33,7 +33,7 @@ useEffect(() => {
   if (showSplash) return <SplashScreen />;
 
   return (
-    <main className="flex flex-col min-h-screen m-[0_auto]  max-w-[600px] relative">
+    <main className="flex flex-col min-h-[100dvh] m-[0_auto]  max-w-[600px] relative">
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       <Suspense fallback={<LoadingRender />}>
         <div>
