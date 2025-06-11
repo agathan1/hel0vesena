@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 
 export default function LoginPage() {
   return (
-    <main className=" h-screen flex flex-col text-center justify-center px-5">
+    <main className=" min-h-screen flex flex-col text-center justify-center px-5">
       <div className="flex flex-col justify-around h-screen">
         <div className="pt-10">
           <img src={Logo} alt="Logo Bisnis" className="min-[600px]:w-[50%] min-[600px]:mx-auto size-70 mx-auto my-auto" />
