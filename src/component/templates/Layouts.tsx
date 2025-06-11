@@ -37,7 +37,7 @@ export default function Layouts() {
     <main className="bg-gray-50 overflow-y-auto">
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       <Suspense fallback={<LoadingRender />}>
-        <div className="max-w-md min-h-screen mx-auto bg-white shadow-xl">
+        <div className="max-w-md min-h-[100dvh] mx-auto bg-white shadow-xl">
           {route?.botNavDisabled ? null : <Botnav />}
           <div className="relative block flex-1 z-5">
             <div className="block">
