@@ -16,27 +16,28 @@ export default function Layouts() {
   //   return () => clearTimeout(timer);
   // }, []);
 
-const isVisisted = localStorage.getItem("firstVisitHeloveseyna");
+  const isVisisted = localStorage.getItem("firstVisitHeloveseyna");
 
-useEffect(() => {
-  if (isVisisted === null) {
-    setShowSplash(true);
-    const timer = setTimeout(() => {
-      localStorage.setItem("firstVisitHeloveseyna", "true");
-      setShowSplash(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }
-}, [isVisisted]);
+  useEffect(() => {
+    if (isVisisted === null) {
+      setShowSplash(true);
+      const timer = setTimeout(() => {
+        localStorage.setItem("firstVisitHeloveseyna", "true");
+        setShowSplash(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [isVisisted]);
 
-// console.log(showSplash);
+  // console.log(showSplash);
   if (showSplash) return <SplashScreen />;
 
   return (
-    <main className="flex flex-col min-h-[100dvh] m-[0_auto]  max-w-[600px] relative">
+    // <main className="flex flex-col min-h-[100dvh] m-[0_auto]  max-w-[600px] relative">
+    <main className="bg-gray-50 overflow-y-auto">
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       <Suspense fallback={<LoadingRender />}>
-        <div>
+        <div className="max-w-md min-h-screen mx-auto bg-white shadow-xl">
           {route?.botNavDisabled ? null : <Botnav />}
           <div className="relative block flex-1 z-5">
             <div className="block">
@@ -48,3 +49,11 @@ useEffect(() => {
     </main>
   );
 }
+
+// {/* <main className="bg-gray-50 overflow-y-auto">
+//   <div className="max-w-md min-h-screen mx-auto bg-white shadow-xl">
+//     {/* <div className="flex flex-col min-h-screen items-center justify-center"> */}
+//     <Outlet />
+//     {/* </div> */}
+//   </div>
+// </main>; */}
