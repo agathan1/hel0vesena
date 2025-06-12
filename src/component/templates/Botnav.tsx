@@ -19,7 +19,7 @@ export default function Botnav() {
               to={item.to}
               className={({ isActive }) =>
                 `flex flex-col items-center text-xs space-y-2 ${
-                  isActive ? "text-amber-200 font-semibold" : "text-gray-400"
+                  isActive ? "text-[#AA762A] font-semibold" : "text-gray-400"
                 }`
               }
             >

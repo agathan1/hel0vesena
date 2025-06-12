@@ -1,5 +1,5 @@
 import React, { type ComponentType } from "react"
-import { LOGIN_PAGE, HOME_PAGE } from "./routes"
+import { LOGIN_PAGE, HOME_PAGE, ADMIN_PAGE } from "./routes"
 
 
 
@@ -12,6 +12,7 @@ interface Route {
 
 const LoginPage = React.lazy(() => import("@/pages/LoginPage"));
 const HomePage = React.lazy(() => import("@/pages/HomePage"));
+const LoginPageAdmin = React.lazy(() => import("@/pages/Admin/LoginPage"));
 
 // const SplashScreen = React.lazy(() => import("@/component/templates/SplashScreen"));
 
@@ -24,6 +25,11 @@ const ROUTES_MENU: Route[] = [
     {
         path: HOME_PAGE,
         component: HomePage,
+    },
+    {
+        path: ADMIN_PAGE,
+        component: LoginPageAdmin,
+        botNavDisabled: true
     },
 ];
 

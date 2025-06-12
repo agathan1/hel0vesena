@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 
 export default function LoginPage() {
   return (
-    <main className=" min-h-[100dvh] flex flex-col items-center justify-around px-5">
+    <main className=" min-h-dvh flex flex-col items-center justify-around px-5">
       <div className="pt-10">
         <img src={Logo} alt="logo bisnis" className="h-68 w-68" />
       </div>

@@ -33,18 +33,18 @@ export default function Layouts() {
   if (showSplash) return <SplashScreen />;
 
   return (
-    <main className="flex flex-col m-[0_auto]  max-w-[600px] relative">
+    <main className="flex flex-col m-[0_auto] max-w-[600px] relative">
     {/* <main className="bg-gray-50 overflow-y-auto"> */}
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       <Suspense fallback={<LoadingRender />}>
-        <div className="min-h-[100dvh] mx-auto">
+        <section >
           {route?.botNavDisabled ? null : <Botnav />}
           <div className="relative block flex-1 z-5">
             <div className="block">
               <Outlet />
             </div>
           </div>
-        </div>
+        </section>
       </Suspense>
     </main>
   );
